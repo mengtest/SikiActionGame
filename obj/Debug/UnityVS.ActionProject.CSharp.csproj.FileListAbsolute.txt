@@ -1,0 +1,11 @@
+G:\unity3d_workSpace\project_workspace\ActionProject\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+G:\unity3d_workSpace\project_workspace\ActionProject\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+G:\unity3d_workSpace\project_workspace\ActionProject\Temp\UnityVS_bin\Debug\UnityEditor.dll
+G:\unity3d_workSpace\project_workspace\ActionProject\Temp\UnityVS_bin\Debug\UnityEngine.dll
+G:\unity3d_workSpace\project_workspace\ActionProject\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+G:\unity3d_workSpace\project_workspace\ActionProject\Temp\UnityVS_bin\Debug\UnityEngine.xml
+G:\unity3d_workSpace\project_workspace\ActionProject\Temp\UnityVS_bin\Debug\UnityEditor.xml
+G:\unity3d_workSpace\project_workspace\ActionProject\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+G:\unity3d_workSpace\project_workspace\ActionProject\obj\Debug\UnityVS.ActionProject.CSharp.csprojResolveAssemblyReference.cache
+G:\unity3d_workSpace\project_workspace\ActionProject\obj\Debug\Assembly-CSharp.dll
+G:\unity3d_workSpace\project_workspace\ActionProject\obj\Debug\Assembly-CSharp.pdb
