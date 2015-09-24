@@ -27,13 +27,11 @@ public class BossAI : MonoBehaviour {
         if (dist > minDistWithPlayer)
         {
             _attackTime = attackTime;
-            //if (!animator.GetCurrentAnimatorStateInfo(0).IsName("BossRun01"))
-            //{
-            //    animator.SetBool("isWall", false);
-
-            //}
             animator.SetTrigger("Run");
-            cc.SimpleMove(transform.forward * speed);
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("BossRun01"))
+            {
+                cc.SimpleMove(transform.forward * speed);
+            }
         }
         else
         {
@@ -42,7 +40,7 @@ public class BossAI : MonoBehaviour {
             if (_attackTime > attackTime)
             {
                 _attackTime = 0;
-                if (Random.Range(0, 1) < 1)
+                if (Random.Range(0, 2) < 1)
                 {
                     animator.SetTrigger("Attack01");
                 }
