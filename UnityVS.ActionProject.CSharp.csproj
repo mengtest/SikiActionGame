@@ -191,7 +191,9 @@
     <Compile Include="Assets\Scripts\BossAI.cs" />
     <Compile Include="Assets\Scripts\CamFollow.cs" />
     <Compile Include="Assets\Scripts\Consts.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawn.cs" />
     <Compile Include="Assets\Scripts\JoyStick.cs" />
+    <Compile Include="Assets\Scripts\MonsterAI.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SettingController.cs" />
   </ItemGroup>
