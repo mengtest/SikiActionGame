@@ -14,7 +14,7 @@ public class BossAI : MonoBehaviour {
 	void Start () {
         animator = GetComponent<Animator>();
         cc = GetComponent<CharacterController>();
-        transPlayer = GameObject.FindWithTag("Hero").transform;
+        transPlayer = GameObject.FindWithTag(Consts.PlayerTag).transform;
         _attackTime = attackTime;
 	}
 	

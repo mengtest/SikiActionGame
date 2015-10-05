@@ -15,7 +15,7 @@ public class MonsterAI : MonoBehaviour {
     {
         animator = GetComponent<Animator>();
         cc = GetComponent<CharacterController>();
-        transPlayer = GameObject.FindWithTag("Hero").transform;
+        transPlayer = GameObject.FindWithTag(Consts.PlayerTag).transform;
         _attackTime = attackTime;
     }
 

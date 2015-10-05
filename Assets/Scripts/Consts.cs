@@ -3,6 +3,6 @@ using System.Collections;
 
 public class Consts {
     public const string PlayerTag = "Player";
-
-    public const string Hero = "Hero";
+    public const string MonsterTag = "Monster";
+    public const string BossTag = "Boss";
 }

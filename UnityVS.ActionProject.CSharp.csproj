@@ -188,12 +188,15 @@
     <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
     <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
     <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+    <Compile Include="Assets\Scripts\ATKAndDamage.cs" />
     <Compile Include="Assets\Scripts\BossAI.cs" />
     <Compile Include="Assets\Scripts\CamFollow.cs" />
     <Compile Include="Assets\Scripts\Consts.cs" />
+    <Compile Include="Assets\Scripts\DestoryEffect.cs" />
     <Compile Include="Assets\Scripts\EnemySpawn.cs" />
     <Compile Include="Assets\Scripts\JoyStick.cs" />
     <Compile Include="Assets\Scripts\MonsterAI.cs" />
+    <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SettingController.cs" />
   </ItemGroup>

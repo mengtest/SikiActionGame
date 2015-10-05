@@ -11,7 +11,7 @@ public class CamFollow : MonoBehaviour {
     private GameObject player;
 	// Use this for initialization
 	void Start () {
-        playerTrans = GameObject.FindWithTag(Consts.Hero).transform;
+        playerTrans = GameObject.FindWithTag(Consts.PlayerTag).transform;
 	}
 	
 	// Update is called once per frame
