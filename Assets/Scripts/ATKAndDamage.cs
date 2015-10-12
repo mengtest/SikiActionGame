@@ -10,7 +10,6 @@ public class ATKAndDamage : MonoBehaviour {
     void Awake()
     {
         animator = GetComponent<Animator>();
-
     }
 
 
@@ -22,19 +21,23 @@ public class ATKAndDamage : MonoBehaviour {
         }
         if (hp > 0)
         {
+            if(this.tag != Consts.PlayerTag)
             animator.SetTrigger("Damage");
-            if (this.tag == Consts.BossTag)
-            {
-                Instantiate(Resources.Load("HitBoss"), transform.position, transform.rotation);
-            }
-            else if (this.tag == Consts.MonsterTag)
-            {
-                Instantiate(Resources.Load("HitMonster"), transform.position, transform.rotation);
-            }
         }
         else
         {
             animator.SetTrigger("Death");
+            EnemySpawn.Instance.enemys.Remove(gameObject);
+            Destroy(gameObject, 2);
+        }
+
+        if (this.tag == Consts.BossTag)
+        {
+            Instantiate(Resources.Load("HitBoss"), transform.position+Vector3.up*0.8f, transform.rotation);
+        }
+        else if (this.tag == Consts.MonsterTag)
+        {
+            Instantiate(Resources.Load("HitMonster"), transform.position + Vector3.up * 0.8f, transform.rotation);
         }
     }
 }

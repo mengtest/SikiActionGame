@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerAttack : ATKAndDamage {
 
@@ -54,15 +55,19 @@ public class PlayerAttack : ATKAndDamage {
 
     public void AttackRange()
     {
+        List<GameObject> tempList = new List<GameObject>();
         foreach (GameObject go in EnemySpawn.Instance.enemys)
         {
             float dist = Vector3.Distance(transform.position, go.transform.position);
             if(dist <= ATKDist) 
             {
-                go.GetComponent<ATKAndDamage>().TakeDamage(attackRange);
-                
+                //go.GetComponent<ATKAndDamage>().TakeDamage(attackRange);
+                tempList.Add(go);
             }
         }
-
+        foreach (GameObject go in tempList)
+        {
+            go.GetComponent<ATKAndDamage>().TakeDamage(attackRange);
+        }
     }
 }
