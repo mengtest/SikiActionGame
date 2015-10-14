@@ -28,16 +28,36 @@ public class ATKAndDamage : MonoBehaviour {
         {
             animator.SetTrigger("Death");
             EnemySpawn.Instance.enemys.Remove(gameObject);
+            if (this.tag == Consts.BossTag)
+            {
+                SpawnAwards();
+            }
             Destroy(gameObject, 2);
         }
 
         if (this.tag == Consts.BossTag)
         {
             Instantiate(Resources.Load("HitBoss"), transform.position+Vector3.up*0.8f, transform.rotation);
+            
         }
         else if (this.tag == Consts.MonsterTag)
         {
             Instantiate(Resources.Load("HitMonster"), transform.position + Vector3.up * 0.8f, transform.rotation);
         }
+    }
+
+    private void SpawnAwards()
+    {
+        string awardname = string.Empty;
+        if (Random.Range(0, 100) < 50)
+        {
+            awardname = "Item-Rapier";
+        }
+        else
+        {
+            awardname = "Item-Gun";
+        }
+        Instantiate(Resources.Load(awardname), transform.position + Vector3.up * 5f, transform.rotation);
+
     }
 }

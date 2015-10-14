@@ -18,8 +18,11 @@ public class SettingController : MonoBehaviour {
     public Color[] colors;
     private int colorIndex;
 
+
+    public static SettingController Instance;
     public void Start()
     {
+        Instance = this;
         colors = new Color[]{ Color.blue, Color.cyan, Color.green, Purple, Color.red, White };
         DontDestroyOnLoad(gameObject);
     }
@@ -75,7 +78,7 @@ public class SettingController : MonoBehaviour {
 
     public void OnColorChange(Color c)
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player") as GameObject;
+        GameObject player = GameObject.FindGameObjectWithTag("Hero") as GameObject;
         int childCount = player.gameObject.transform.childCount;
         for (int i = 0; i < childCount; i++)
         {
@@ -96,9 +99,32 @@ public class SettingController : MonoBehaviour {
     }
 
 
+
+    public void  SetPlayerConfigInfo()
+    {
+        GameObject player = GameObject.FindWithTag(Consts.PlayerTag);
+        int childCount = player.gameObject.transform.childCount;
+        for (int i = 0; i < childCount; i++)
+        {
+            GameObject go = player.gameObject.transform.GetChild(i).gameObject;
+            if (go.name == "b_Bip")
+            {
+                continue;
+            }
+            go.renderer.material.color = colors[colorIndex];
+        }
+
+        //head mesh
+        SkinnedMeshRenderer playerHeadMesh = player.transform.FindChild("AHead").renderer as SkinnedMeshRenderer;
+        playerHeadMesh.sharedMesh = headMeshs[headMeshIndex];
+
+        SkinnedMeshRenderer playerHandMesh = player.transform.FindChild("DHand").renderer as SkinnedMeshRenderer;
+        playerHandMesh.sharedMesh = handMeshs[handMeshIndex];
+    }
+
     public void OnPlayStart()
     {
         SaveInfo();
-        //loading next scene
+        Application.LoadLevel(1);
     }
 }

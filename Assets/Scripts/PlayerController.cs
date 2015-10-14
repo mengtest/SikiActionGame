@@ -10,9 +10,11 @@ public class PlayerController : MonoBehaviour {
     private bool isAttackB;
     void Start()
     {
+
+        SettingController.Instance.SetPlayerConfigInfo();
         cc = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
-
+        Debug.Log("+++++++++++++++++++++:  " + animator);
         AddAttackListener();
     }
 
